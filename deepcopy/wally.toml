@@ -1,0 +1,8 @@
+[package]
+name = "andremhpra/deepcopy"
+version = "0.1.0"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+description = "Deep copies the provided table with strict-typing support."
+
+[dependencies]
