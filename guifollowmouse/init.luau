@@ -75,10 +75,13 @@ local function createConnection(guiObject: GuiObject): RBXScriptConnection
 	return connection :: any
 end
 
+---- PUBLIC FUNCTIONS ----
 function GuiFollowMouse.start(guiObject: GuiObject): ()
 	if activeGuiObjects[guiObject] then
+		-- The provided `guiObject` is already following the mouse.
+		-- Nothing needed to do.
 		return
-	end -- Already active
+	end
 
 	activeGuiObjects[guiObject] = {
 		Position = guiObject.Position,
@@ -99,8 +102,10 @@ end
 function GuiFollowMouse.stop(guiObject: GuiObject): ()
 	local data = activeGuiObjects[guiObject]
 	if not data then
+		-- `.start()` haven't been called for the provided `guiObject`.
+		-- Nothing to stop.
 		return
-	end -- Not active
+	end
 
 	if data.Connection then
 		data.Connection:Disconnect()
