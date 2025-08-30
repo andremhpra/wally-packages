@@ -1,0 +1,8 @@
+[package]
+name = "andremhpra/weightedrng"
+version = "0.1.3"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+description = "Picks a random item in the table based on their `chance/totalChance`, has an optional luck parameter"
+
+[dependencies]

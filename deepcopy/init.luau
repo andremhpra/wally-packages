@@ -1,4 +1,4 @@
-return function<T>(tbl: T): T
+local function deepCopy<T>(tbl: T): T
 	assert(type(tbl) == "table", "Provided table must be a table!")
 
 	local copy = {}
@@ -11,3 +11,5 @@ return function<T>(tbl: T): T
 	end
 	return copy :: any
 end
+
+return deepCopy

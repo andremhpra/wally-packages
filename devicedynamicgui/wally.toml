@@ -1,0 +1,10 @@
+[package]
+name = "andremhpra/devicedynamicgui"
+version = "1.0.1"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+description = "The position & size of GuiObjects will change depending on the player's device."
+
+[dependencies]
+GetAttributeSafe = "andremhpra/getattrsafe@1.0.1"
+UserInputDevice = "andremhpra/userinputdevice@0.1.1"

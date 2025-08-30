@@ -1,0 +1,9 @@
+[package]
+name = "andremhpra/guifollowmouse"
+version = "0.1.4"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+description = "Provided GuiObject will follow the mouse, supports all devices (PC, Mobile, Console using virtual mouse)."
+
+[dependencies]
+UserInputDevice = "andremhpra/userinputdevice@0.1.1"

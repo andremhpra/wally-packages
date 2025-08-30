@@ -1,0 +1,8 @@
+[package]
+name = "andremhpra/chatcommand"
+version = "1.0.2"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "server"
+description = "Register and manage slash (/) chat commands that trigger custom server-side functions, with permission control."
+
+[dependencies]

@@ -1,8 +1,8 @@
 [package]
 name = "andremhpra/camray"
-version = "0.1.2"
+version = "0.1.3"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
-description = "Wrapper for raycasting from the player's camera to the player's mouse, supports InputObject input for mobile/console users."
+description = "Wrapper for raycasting from the player's camera to the player's mouse, supports tap position for mobile support."
 
 [dependencies]

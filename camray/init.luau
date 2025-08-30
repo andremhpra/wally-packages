@@ -8,9 +8,9 @@ type MouseRaycastImpl = {
 	__index: MouseRaycastImpl,
 
 	--[[
-        @param input If provided, reads the mouse position based on it. Used for mobile-compability.
+        @param mobileMousePosition, if provided, uses that as the mouse coordinates. Used for mobile-compability.
     ]]
-	Raycast: (self: MouseRaycast, input: InputObject?) -> RaycastResult?,
+	Raycast: (self: MouseRaycast, tapPosition: Vector2?) -> RaycastResult?,
 }
 
 export type MouseRaycast = typeof(setmetatable(
@@ -36,10 +36,10 @@ local function new(params: RaycastParams?, raycastLength: number): MouseRaycast
 	}, MouseRaycast)
 end
 
-function MouseRaycast:Raycast(input: InputObject?): RaycastResult?
+function MouseRaycast:Raycast(tapPosition): RaycastResult?
 	local mousePosition
-	if input then
-		mousePosition = Vector2.new(input.Position.X, input.Position.Y)
+	if tapPosition then
+		mousePosition = tapPosition
 	else
 		mousePosition = UserInputService:GetMouseLocation() - GuiService:GetGuiInset()
 	end
