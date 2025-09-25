@@ -3,7 +3,7 @@
 local ValidateType = {}
 
 ---- PUBLIC FUNCTIONS ----
-function ValidateType.simpleTable(tbl: { [any]: any }, keyType: string, validator: (any) -> boolean): boolean
+function ValidateType.table<T>(tbl: { [any]: T }, keyType: string, validator: (T) -> boolean): boolean
 	-- Make sure this is actually a table
 	if typeof(tbl) ~= "table" then
 		return false
